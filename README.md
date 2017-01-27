@@ -62,6 +62,15 @@ public ExampleObject getExample() {
 
 ```
 
+To make the @FilteredResponseBody annotation work, we have to add the FilteredResponseBodyAdvice to the project.
+The simplest way to do this is to extend the class and annotate it with @ControllerAdvice.
+
+```java
+@ControllerAdvice
+public class FilteredResponseBodyAdviceImpl extends FilteredResponseBodyAdvice {
+}
+```
+
 ## ObjectMapper
 
 ```java
